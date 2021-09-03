@@ -1,10 +1,5 @@
-release:
-	rm -rf dist
-	python3 setup.py sdist
-	twine upload dist/*
-
 test:
-	pytest --cov=template_project --cov-report term-missing
+	pytest --cov=dict --cov-report term-missing
 
 lint:
 	pre-commit run -a
@@ -14,4 +9,4 @@ clean:
 	rm -rf .mypy_cache
 	rm -rf .pytest_cache
 
-.PHONY: release test lint clean
+.PHONY: test lint clean

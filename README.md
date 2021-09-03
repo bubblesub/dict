@@ -1,32 +1,16 @@
-template_project
-================
+dict
+====
 
-This is a template that I use for a typical vanilla Python project. Includes:
+A command line toolkit for online dictionary lookups.
 
-- MIT license
-- CLI endpoint template
-- pre-commit configuration
-    - black
-    - isort
-    - pylint
-    - mypy
-- setup.cfg template
-- type hints stubs (PEP-561)
-- GitHub actions template
-- Makefile with
+Currently supports:
 
-To use it:
-- copy the directory tree
-- replace every `template_project` occurrence with a name of your project
-- replace every `Author Name` occurrence with your name
-- change README.md
-- change the `description` in `setup.cfg`
-- go through Makefile and setup.cfg.
+- reverso (https://www.reverso.net/)
 
 ## Installation
 
 ```
-pip install --user template_project
+pip install --user dict
 ```
 
 ## Contributing

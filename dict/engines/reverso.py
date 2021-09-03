@@ -10,7 +10,7 @@ import lxml.etree
 from dict.colors import COLOR_HIGHLIGHT, COLOR_RESET
 from dict.engines.base import BaseEngine
 
-BASE_URL = "http://context.reverso.net/translation/"
+BASE_URL = "http://context.reverso.net/translation"
 USER_AGENT = (
     "Mozilla/5.0 (X11; Linux x86_64; rv:10.0) Gecko/20100101 Firefox/10.0"
 )
@@ -75,10 +75,8 @@ class ReversoEngine(BaseEngine):
         conjugate: bool = args.conjugate
 
         url = (
-            BASE_URL
-            + f"{src_language}-{dst_language}/"
-            + f"{urllib.parse.quote(phrase)}"
-            + f"?d={conjugate:d}"
+            f"{BASE_URL}/{src_language}-{dst_language}/"
+            f"{urllib.parse.quote(phrase)}?d={conjugate:d}"
         )
 
         request = urllib.request.Request(

@@ -14,7 +14,7 @@ class BaseEngine:
 
         :param parser: parser to configure
         """
-        raise NotImplementedError("not implemented")
+        raise NotImplementedError("not implemented")  # pragma: no cover
 
     def lookup_phrase(
         self, args: argparse.Namespace, phrase: str
@@ -25,4 +25,4 @@ class BaseEngine:
         :param phrase: phrase to look up
         :return: a generator of string results to show
         """
-        raise NotImplementedError("not implemented")
+        raise NotImplementedError("not implemented")  # pragma: no cover

@@ -66,12 +66,6 @@ class ReversoEngine(BaseEngine):
             dest="dst_lang",
             choices=LANG_MAP.keys(),
         )
-        parser.add_argument(
-            "-N",
-            action="store_false",
-            dest="use_pager",
-            help="disable pager in interactive mode",
-        )
 
     def lookup_phrase(
         self, args: argparse.Namespace, phrase: str

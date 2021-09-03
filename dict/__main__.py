@@ -22,6 +22,13 @@ def parse_args() -> argparse.Namespace:
         choices=[cls.name for cls in BaseEngine.__subclasses__()],
         required=True,
     )
+    parser.add_argument(
+        "-N",
+        "--no-pager",
+        action="store_false",
+        dest="use_pager",
+        help="disable pager in interactive mode",
+    )
     parser.add_argument("phrase", nargs="?")
     args, _remaining_args = parser.parse_known_args()
     engine = next(

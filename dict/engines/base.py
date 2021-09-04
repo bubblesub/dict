@@ -17,7 +17,6 @@ class BaseEngine(Generic[TResult]):
 
         :param parser: parser to configure
         """
-        raise NotImplementedError("not implemented")  # pragma: no cover
 
     def lookup_phrase(
         self, args: argparse.Namespace, phrase: str

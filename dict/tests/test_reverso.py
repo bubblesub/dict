@@ -11,7 +11,7 @@ def test_reverso(data_dir: Path, capsys) -> None:
         "requests.get",
         return_value=Mock(
             raise_for_status=Mock(),
-            text=(data_dir / "reverso_in.txt").read_text(),
+            text=(data_dir / "reverso_in.html").read_text(),
         ),
     ) as fake_get:
         main(["-e", "reverso", "-N", "ridiculous", "-s", "pl", "-d", "en"])

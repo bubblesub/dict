@@ -1,6 +1,9 @@
-"""Pager() function declaration."""
+"""Utilities related to terminal output."""
 import io
+import shutil
 import subprocess
+from collections.abc import Iterable
+from typing import IO
 
 
 def pager(text: str) -> None:
@@ -31,3 +34,25 @@ def pager(text: str) -> None:
             # Ignore ctl-c like the pager itself does.  Otherwise the pager is
             # left running and the terminal is in raw mode and unusable.
             pass
+
+
+def print_in_columns(items: Iterable[str], file: IO[str]) -> None:
+    """Print items in columns, filling the terminal horizontally.
+
+    :param items: list of phrases to print in columns
+    :param file: output stream
+    """
+    items = [f"- {item} " for item in items]
+    column_size = max((len(item) for item in items), default=5)
+    term_size = shutil.get_terminal_size()
+    columns = term_size.columns // column_size
+    while items:
+        row = ""
+        for _ in range(columns):
+            if not items:
+                break
+            item = items.pop(0)
+            row += f"{item:<{column_size}s}"
+        row = row.rstrip()
+        print(row, end="\n" if len(row) < term_size.columns else "", file=file)
+    print(file=file)

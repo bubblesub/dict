@@ -4,6 +4,7 @@ from .jisho import JishoEngine
 from .reverso import ReversoEngine
 from .sjp import SJPEngine
 from .urban import UrbanEngine
+from .wordhippo import WordHippoEngine
 
 __all__ = [
     "BaseEngine",

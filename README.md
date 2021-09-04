@@ -9,6 +9,7 @@ Currently supports:
 - Urban Dictionary (https://www.urbandictionary.com/)
 - Słownik Języka Polskiego (https://sjp.pl/)
 - Jisho (https://jisho.org/)
+- WordHippo (https://www.wordhippo.com/)
 
 ## Installation
 

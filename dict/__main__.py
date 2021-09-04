@@ -32,7 +32,7 @@ def parse_args(args: list[str]) -> argparse.Namespace:
     )
     parser.add_argument("phrase", nargs="?")
     ret, remaining_args = parser.parse_known_args(args)
-    engine = next(
+    engine: BaseEngine = next(
         cls() for cls in BaseEngine.__subclasses__() if cls.name == ret.engine
     )
     engine.decorate_arg_parser(parser)
@@ -51,9 +51,7 @@ def main(args: list[str]) -> None:
 
         with io.StringIO() as file:
             if results:
-                for result in results:
-                    print(result, file=file)
-                    print(file=file)
+                parsed_args.engine.print_results(results=results, file=file)
             else:
                 print(COLOR_ERROR + "no results" + COLOR_RESET, file=file)
 

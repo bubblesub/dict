@@ -4,6 +4,8 @@ import re
 import urllib.parse
 import urllib.request
 from collections.abc import Iterable
+from dataclasses import dataclass
+from typing import IO
 
 import lxml.etree
 
@@ -31,6 +33,14 @@ LANG_MAP = {
 }
 
 
+@dataclass
+class ReversoResult:
+    """A result from the reverso.net engine."""
+
+    source: str
+    target: str
+
+
 def _format_html(node: lxml.etree.Element) -> str:
     html = lxml.etree.tostring(node, encoding="unicode")
     html = html.replace("<em>", COLOR_HIGHLIGHT).replace("</em>", COLOR_RESET)
@@ -40,7 +50,7 @@ def _format_html(node: lxml.etree.Element) -> str:
     return html
 
 
-class ReversoEngine(BaseEngine):
+class ReversoEngine(BaseEngine[ReversoResult]):
     """Reverso.net engine."""
 
     name = "reverso"
@@ -69,7 +79,7 @@ class ReversoEngine(BaseEngine):
 
     def lookup_phrase(
         self, args: argparse.Namespace, phrase: str
-    ) -> Iterable[str]:
+    ) -> Iterable[ReversoResult]:
         src_language = LANG_MAP[args.src_lang]
         dst_language = LANG_MAP[args.dst_lang]
         conjugate: bool = args.conjugate
@@ -90,13 +100,19 @@ class ReversoEngine(BaseEngine):
                 for example_node in doc.cssselect("div.example"):
                     src_node = example_node.cssselect("div.src span.text")[0]
                     dst_node = example_node.cssselect("div.trg span.text")[0]
-                    yield "\n".join(
-                        [
-                            _format_html(src_node),
-                            _format_html(dst_node),
-                        ]
+                    yield ReversoResult(
+                        source=_format_html(src_node),
+                        target=_format_html(dst_node),
                     )
         except urllib.error.HTTPError as ex:
             if ex.code == 404:
                 return
             raise
+
+    def print_results(
+        self, results: Iterable[ReversoResult], file: IO[str]
+    ) -> None:
+        for result in results:
+            print(result.source, file=file)
+            print(result.target, file=file)
+            print(file=file)

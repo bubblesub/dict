@@ -30,3 +30,18 @@ def strip_html(text: str) -> str:
     :return: sanitized text
     """
     return re.sub("<[^>]*>", "", text)
+
+
+def strip_ansi_sequences(text: str) -> str:
+    """Strip ANSI sequences from the input text.
+
+    :param text: text to sanitize
+    :return: sanitized text
+    """
+    return re.sub(
+        r"(?:\x1B[@-Z\\-_]|"
+        r"[\x80-\x9A\x9C-\x9F]|"
+        r"(?:\x1B\[|\x9B)[0-?]*[ -/]*[@-~])",
+        "",
+        text,
+    )

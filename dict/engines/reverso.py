@@ -89,25 +89,22 @@ class ReversoEngine(BaseEngine[ReversoResult]):
             f"{urllib.parse.quote(phrase)}?d={conjugate:d}"
         )
 
-        try:
-            response = requests.get(
-                url, {"d": int(conjugate)}, headers={"User-Agent": USER_AGENT}
-            )
-            response.raise_for_status()
-            content = response.text
+        response = requests.get(
+            url, {"d": int(conjugate)}, headers={"User-Agent": USER_AGENT}
+        )
+        if response.status_code == 404:
+            return
+        response.raise_for_status()
+        content = response.text
 
-            doc = lxml.etree.HTML(content)
-            for example_node in doc.cssselect("div.example"):
-                src_node = example_node.cssselect("div.src span.text")[0]
-                dst_node = example_node.cssselect("div.trg span.text")[0]
-                yield ReversoResult(
-                    source=_format_html(src_node),
-                    target=_format_html(dst_node),
-                )
-        except requests.exceptions.HTTPError as ex:
-            if ex.response.status_code == 404:
-                return
-            raise
+        doc = lxml.etree.HTML(content)
+        for example_node in doc.cssselect("div.example"):
+            src_node = example_node.cssselect("div.src span.text")[0]
+            dst_node = example_node.cssselect("div.trg span.text")[0]
+            yield ReversoResult(
+                source=_format_html(src_node),
+                target=_format_html(dst_node),
+            )
 
     def print_results(
         self, results: Iterable[ReversoResult], file: IO[str]

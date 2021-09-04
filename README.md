@@ -6,6 +6,7 @@ A command line toolkit for online dictionary lookups.
 Currently supports:
 
 - reverso (https://www.reverso.net/)
+- Urban Dictionary (https://www.urbandictionary.com/)
 
 ## Installation
 

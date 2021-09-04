@@ -11,6 +11,7 @@ import requests
 
 from dict.colors import COLOR_HIGHLIGHT, COLOR_RESET
 from dict.engines.base import BaseEngine
+from dict.text import expand_sgml, strip_html
 
 
 @dataclass
@@ -43,7 +44,12 @@ class SJPEngine(BaseEngine[SJPResult]):
 
         doc = lxml.html.fromstring(content)
         for header in doc.cssselect("h1"):
-            term = header.text
+            term = strip_html(
+                expand_sgml(lxml.etree.tostring(header, encoding="unicode"))
+            ).strip()
+            if term.endswith("✕"):
+                continue
+
             definitions = []
             for node in header.itersiblings():
                 if re.search(

@@ -1,6 +1,5 @@
 """Definition of the ReversoEngine."""
 import argparse
-import re
 import urllib.parse
 from collections.abc import Iterable
 from dataclasses import dataclass
@@ -11,6 +10,7 @@ import requests
 
 from dict.colors import COLOR_HIGHLIGHT, COLOR_RESET
 from dict.engines.base import BaseEngine
+from dict.text import expand_sgml, strip_html
 
 BASE_URL = "http://context.reverso.net/translation"
 USER_AGENT = (
@@ -44,8 +44,8 @@ class ReversoResult:
 def _format_html(node: lxml.etree.Element) -> str:
     html = lxml.etree.tostring(node, encoding="unicode")
     html = html.replace("<em>", COLOR_HIGHLIGHT).replace("</em>", COLOR_RESET)
-    html = re.sub(r"&#(\d+);", lambda m: chr(int(m.group(1))), html)
-    html = re.sub("<[^>]*>", "", html)
+    html = expand_sgml(html)
+    html = strip_html(html)
     html = html.strip()
     return html
 

@@ -11,6 +11,9 @@ jobs = 0
 [tool.pylint.format]
 max-line-length = 79
 
+[tool.pylint.similarities]
+ignore-imports = true
+
 [tool.pylint.messages_control]
 reports = "no"
 disable = [

@@ -8,6 +8,7 @@ Currently supports:
 - reverso (https://www.reverso.net/)
 - Urban Dictionary (https://www.urbandictionary.com/)
 - Słownik Języka Polskiego (https://sjp.pl/)
+- Jisho (https://jisho.org/)
 
 ## Installation
 

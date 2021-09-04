@@ -1,0 +1,132 @@
+[38;5;223m[48;5;58m試し (ためし)[0m
+[38;5;223m[48;5;58m験し (ためし)[0m
+[38;5;223m[48;5;58m験 (ためし)[0m
+trial
+test
+
+[38;5;223m[48;5;58m試練 (しれん)[0m
+[38;5;223m[48;5;58m試煉 (しれん)[0m
+[38;5;223m[48;5;58m試錬 (しれん)[0m
+test
+trial
+probation
+ordeal
+tribulation
+
+[38;5;223m[48;5;58m試験 (しけん)[0m
+examination
+exam
+test
+trial
+experiment
+test
+
+[38;5;223m[48;5;58mテスト[0m
+examination
+quiz
+test
+test
+tryout
+trial
+rehearsal (in filming)
+Test
+
+[38;5;223m[48;5;58m試金石 (しきんせき)[0m
+touchstone
+Lydian stone
+touchstone (e.g. of success)
+test
+litmus test
+Touchstone (assaying tool)
+
+[38;5;223m[48;5;58m試す (ためす)[0m
+[38;5;223m[48;5;58m験す (ためす)[0m
+to attempt
+to test
+to try out
+
+[38;5;223m[48;5;58m考試 (こうし)[0m
+test
+exam
+
+[38;5;223m[48;5;58m試乗 (しじょう)[0m
+test drive
+test ride
+trial ride
+
+[38;5;223m[48;5;58m核実験 (かくじっけん)[0m
+nuclear (bomb) test
+Nuclear weapons testing
+
+[38;5;223m[48;5;58m血液検査 (けつえきけんさ)[0m
+blood test
+hemanalysis
+Blood test
+
+[38;5;223m[48;5;58m試験管 (しけんかん)[0m
+test tube
+Test tube
+
+[38;5;223m[48;5;58m見る (みる)[0m
+[38;5;223m[48;5;58m観る (みる)[0m
+[38;5;223m[48;5;58m視る (みる)[0m
+to see
+to look
+to watch
+to view
+to observe
+to examine
+to look over
+to assess
+to check
+to judge
+to look after
+to attend to
+to take care of
+to keep an eye on
+to experience
+to meet with (misfortune, success, etc.)
+to try ...
+to have a go at ...
+to give ... a try
+to see (that) ...
+to find (that) ...
+
+[38;5;223m[48;5;58m考査 (こうさ)[0m
+examination
+consideration
+test
+quiz
+
+[38;5;223m[48;5;58m視力検査 (しりょくけんさ)[0m
+eye test
+eyesight test
+
+[38;5;223m[48;5;58m英検 (えいけん)[0m
+English proficiency test (esp. the STEP test)
+
+[38;5;223m[48;5;58m被験者 (ひけんしゃ)[0m
+[38;5;223m[48;5;58m被検者 (ひけんしゃ)[0m
+subject (of a medical experiment, etc.)
+test subject
+trial subject
+testee
+examinee (of a full-body scan, etc.)
+
+[38;5;223m[48;5;58m模擬試験 (もぎしけん)[0m
+mock exam
+practice exam
+practice test
+
+[38;5;223m[48;5;58m試運転 (しうんてん)[0m
+trial run
+test run
+
+[38;5;223m[48;5;58m力試し (ちからだめし)[0m
+test of one's strength
+test of one's ability
+
+[38;5;223m[48;5;58m模試 (もし)[0m
+mock exam
+practice exam
+practice test

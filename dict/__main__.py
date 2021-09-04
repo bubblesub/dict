@@ -56,9 +56,9 @@ def main(args: list[str]) -> None:
                 print(COLOR_ERROR + "no results" + COLOR_RESET, file=file)
 
             if parsed_args.use_pager:
-                pager(file.getvalue())
+                pager(file.getvalue().rstrip() + "\n")
             else:
-                print(file.getvalue(), end="")
+                print(file.getvalue().rstrip())
 
     if parsed_args.phrase is not None:
         # one-shot

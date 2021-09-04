@@ -1,32 +1,24 @@
 """Test the ReversoEngine class."""
 from pathlib import Path
-from unittest.mock import patch
+from unittest.mock import Mock, patch
 
 from dict.__main__ import main
 
 
 def test_reverso(data_dir: Path, capsys) -> None:
     """Test the reverso.net engine."""
-    with (data_dir / "reverso_in.txt").open("rb") as handle:
-        with patch(
-            "urllib.request.urlopen", return_value=handle
-        ) as fake_urlopen:
-            main(
-                [
-                    "-e",
-                    "reverso",
-                    "--no-pager",
-                    "ridiculous",
-                    "-s",
-                    "pl",
-                    "-d",
-                    "en",
-                ]
-            )
+    with patch(
+        "requests.get",
+        return_value=Mock(
+            raise_for_status=Mock(),
+            text=(data_dir / "reverso_in.txt").read_text(),
+        ),
+    ) as fake_get:
+        main(["-e", "reverso", "-N", "ridiculous", "-s", "pl", "-d", "en"])
 
-    fake_urlopen.assert_called_once()
+    fake_get.assert_called_once()
 
-    assert fake_urlopen.mock_calls[0].args[0].full_url == (
+    assert fake_get.mock_calls[0].args[0] == (
         "http://context.reverso.net/translation/"
         "polish-english/ridiculous?d=1"
     )

@@ -5,11 +5,12 @@ A command line toolkit for online dictionary lookups.
 
 Currently supports:
 
+- WordHippo (https://www.wordhippo.com/)
+- Edict (http://www.edrdg.org/jmdictdb/)
+- Jisho (https://jisho.org/)
 - reverso (https://www.reverso.net/)
 - Urban Dictionary (https://www.urbandictionary.com/)
 - Słownik Języka Polskiego (https://sjp.pl/)
-- Jisho (https://jisho.org/)
-- WordHippo (https://www.wordhippo.com/)
 
 ## Installation
 

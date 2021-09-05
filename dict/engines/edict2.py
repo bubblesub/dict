@@ -201,7 +201,7 @@ def parse_edict2_line(raw_entry: str) -> Edict2Result:
 class Edict2Engine(BaseEngine[Edict2Result]):
     """Edict2 engine (a Japanese textfile dictionary)."""
 
-    name = "edict"
+    names = ["edict", "edict2"]
 
     def lookup_phrase(
         self, args: argparse.Namespace, phrase: str

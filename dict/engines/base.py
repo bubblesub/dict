@@ -9,7 +9,15 @@ TResult = TypeVar("TResult")
 class BaseEngine(Generic[TResult]):
     """Base dictionary engine."""
 
-    name: str = NotImplemented
+    names: list[str] = NotImplemented
+
+    @property
+    def primary_name(self) -> str:
+        """Return the primary name of this engine.
+
+        :return: first name
+        """
+        return self.names[0]
 
     @staticmethod
     def decorate_arg_parser(parser: argparse.ArgumentParser) -> None:

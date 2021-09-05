@@ -53,7 +53,7 @@ def _format_html(node: lxml.etree.Element) -> str:
 class ReversoEngine(BaseEngine[ReversoResult]):
     """Reverso.net engine."""
 
-    name = "reverso"
+    names = ["reverso"]
 
     @staticmethod
     def decorate_arg_parser(parser: argparse.ArgumentParser) -> None:

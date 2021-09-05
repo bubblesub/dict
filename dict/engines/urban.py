@@ -25,7 +25,7 @@ class UrbanResult:
 class UrbanEngine(BaseEngine[UrbanResult]):
     """Urban Dictionary engine."""
 
-    name = "urban"
+    names = ["urban"]
 
     @staticmethod
     def decorate_arg_parser(parser: argparse.ArgumentParser) -> None:

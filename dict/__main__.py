@@ -20,7 +20,7 @@ def parse_args(args: list[str]) -> argparse.Namespace:
     parser.add_argument(
         "-e",
         "--engine",
-        choices=[cls.name for cls in BaseEngine.__subclasses__()],
+        choices=sum([cls.names for cls in BaseEngine.__subclasses__()], []),
         required=True,
     )
     parser.add_argument(
@@ -33,7 +33,7 @@ def parse_args(args: list[str]) -> argparse.Namespace:
     parser.add_argument("phrase", nargs="?")
     ret, remaining_args = parser.parse_known_args(args)
     engine: BaseEngine = next(
-        cls() for cls in BaseEngine.__subclasses__() if cls.name == ret.engine
+        cls() for cls in BaseEngine.__subclasses__() if ret.engine in cls.names
     )
     engine.decorate_arg_parser(parser)
     ret = parser.parse_args(args + remaining_args)
@@ -68,7 +68,9 @@ def main(args: list[str]) -> None:
         while True:
             try:
                 phrase = input(
-                    f"{COLOR_PROMPT}{parsed_args.engine.name}> {COLOR_RESET}"
+                    f"{COLOR_PROMPT}"
+                    f"{parsed_args.engine.primary_name}> "
+                    f"{COLOR_RESET}"
                 )
             except (EOFError, KeyboardInterrupt):
                 break

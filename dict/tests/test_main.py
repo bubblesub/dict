@@ -14,7 +14,7 @@ from dict.engines import BaseEngine
 class DummyEngine(BaseEngine[str]):
     """A dummy dictionary engine."""
 
-    name = "dummy-engine"
+    names = ["dummy-engine"]
 
     @staticmethod
     def decorate_arg_parser(parser: argparse.ArgumentParser) -> None:

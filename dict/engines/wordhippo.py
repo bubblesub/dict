@@ -83,7 +83,7 @@ class WordHippoSynonymResult(BaseWordHippoResult):
 class WordHippoEngine(BaseEngine[BaseWordHippoResult]):
     """WordHippo engine."""
 
-    name = "wordhippo"
+    names = ["wordhippo"]
 
     @staticmethod
     def decorate_arg_parser(parser: argparse.ArgumentParser) -> None:

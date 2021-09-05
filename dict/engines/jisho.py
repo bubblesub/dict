@@ -29,7 +29,7 @@ class JishoResult:
 class JishoEngine(BaseEngine[JishoResult]):
     """Jisho.org engine."""
 
-    name = "jisho"
+    names = ["jisho"]
 
     def lookup_phrase(
         self, args: argparse.Namespace, phrase: str

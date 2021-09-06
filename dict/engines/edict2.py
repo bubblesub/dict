@@ -210,16 +210,17 @@ class Edict2Engine(BaseEngine[Edict2Result]):
             CACHE_PATH.parent.mkdir(parents=True, exist_ok=True)
             CACHE_PATH.write_text(self._download())
 
+        pattern = re.compile(phrase, flags=re.I)
+
         with CACHE_PATH.open("r") as handle:
             for line in handle:
-                if re.search(phrase, line, flags=re.I):
+                if pattern.search(line):
                     result = parse_edict2_line(line)
                     if any(
-                        re.search(phrase, jap.kana, flags=re.I)
-                        or re.search(phrase, jap.kanji, flags=re.I)
+                        pattern.search(jap.kana) or pattern.search(jap.kanji)
                         for jap in result.japanese
                     ) or any(
-                        re.search(phrase, glossary.english, flags=re.I)
+                        pattern.search(glossary.english)
                         for glossary in result.glossaries
                     ):
                         yield result

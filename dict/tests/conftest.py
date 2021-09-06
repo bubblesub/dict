@@ -10,4 +10,4 @@ def fixture_data_dir() -> Path:
 
     :return: path to the data directory
     """
-    return Path(__file__).parent / "data"
+    return Path(__file__).parent / "testdata"

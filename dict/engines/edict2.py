@@ -8,12 +8,11 @@ from io import BytesIO
 from pathlib import Path
 from typing import IO, Optional
 
-import requests
 import xdg
-from tqdm import tqdm
 
 from dict.colors import COLOR_HIGHLIGHT, COLOR_RESET
 from dict.engines.base import BaseEngine
+from dict.http import download
 
 PART_OF_SPEECH_CODES = (
     "adj-i adj-na adj-no adj-pn adj-t adj-f adj adv adv-to aux aux-v aux-adj "
@@ -198,17 +197,39 @@ def parse_edict2_line(raw_entry: str) -> Edict2Result:
     )
 
 
+def download_edict2_if_needed() -> None:
+    """Download the Edict dictionary file, if it does not exist yet."""
+    if CACHE_PATH.exists():
+        return
+
+    CACHE_PATH.parent.mkdir(parents=True, exist_ok=True)
+    with BytesIO() as handle:
+        download(
+            DOWNLOAD_URL,
+            description="downloading the dictionary",
+            handle=handle,
+        )
+        CACHE_PATH.write_text(
+            gzip.decompress(handle.getvalue()).decode("euc-jp")
+        )
+
+
 class Edict2Engine(BaseEngine[Edict2Result]):
-    """Edict2 engine (a Japanese textfile dictionary)."""
+    """Edict2 engine (a Japanese textfile dictionary).
+
+    Downloads Edict EUC-JP gzipped file, where each entry is represented by a
+    single physical line. The search process is divided into two steps: first
+    the entry is scanned with the input phrase interpreted as a regex. The
+    physical lines that match are then parsed into logic entries and further
+    filtered, this time within specific fields.
+    """
 
     names = ["edict", "edict2"]
 
     def lookup_phrase(
         self, args: argparse.Namespace, phrase: str
     ) -> Iterable[Edict2Result]:
-        if not CACHE_PATH.exists():
-            CACHE_PATH.parent.mkdir(parents=True, exist_ok=True)
-            CACHE_PATH.write_text(self._download())
+        download_edict2_if_needed()
 
         pattern = re.compile(phrase, flags=re.I)
 
@@ -238,19 +259,3 @@ class Edict2Engine(BaseEngine[Edict2Result]):
             for glossary in result.glossaries:
                 print(glossary.english, file=file)
             print(file=file)
-
-    @staticmethod
-    def _download() -> str:
-        response = requests.get(DOWNLOAD_URL, stream=True)
-        total_size_in_bytes = int(response.headers.get("Content-Length", 0))
-        block_size = 1024
-        with tqdm(
-            desc="downloading the dictionary",
-            total=total_size_in_bytes,
-            unit="iB",
-            unit_scale=True,
-        ) as progress_bar, BytesIO() as handle:
-            for data in response.iter_content(block_size):
-                progress_bar.update(len(data))
-                handle.write(data)
-            return gzip.decompress(handle.getvalue()).decode("euc-jp")

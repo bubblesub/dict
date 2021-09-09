@@ -6,6 +6,7 @@ from typing import IO
 
 import requests
 
+from dict.colors import COLOR_HIGHLIGHT, COLOR_RESET
 from dict.engines.base import BaseEngine
 from dict.text import wrap_long_text
 
@@ -49,7 +50,7 @@ class UrbanEngine(BaseEngine[UrbanResult]):
         self, results: Iterable[UrbanResult], file: IO[str]
     ) -> None:
         for result in results:
-            print("Definition:", file=file)
+            print(COLOR_HIGHLIGHT + "Definition:" + COLOR_RESET, file=file)
             print(wrap_long_text(result.definition), file=file)
             print(file=file)
             print("Example:", file=file)
@@ -57,6 +58,4 @@ class UrbanEngine(BaseEngine[UrbanResult]):
             print(
                 "+%d -%d" % (result.thumbs_up, result.thumbs_down), file=file
             )
-            print(file=file)
-            print("-" * 50, file=file)
             print(file=file)

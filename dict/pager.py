@@ -9,7 +9,7 @@ from typing import IO
 def pager(text: str) -> None:
     """Page through text in the terminal by feeding it to another program."""
     proc = subprocess.Popen(  # pylint: disable=consider-using-with
-        "less -r", shell=True, stdin=subprocess.PIPE
+        "less -C -r", shell=True, stdin=subprocess.PIPE
     )
 
     if proc.stdin:

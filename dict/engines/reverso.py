@@ -58,23 +58,27 @@ class ReversoEngine(BaseEngine[ReversoResult]):
     @staticmethod
     def decorate_arg_parser(parser: argparse.ArgumentParser) -> None:
         parser.add_argument(
-            "-n", "--no-conjugations", action="store_false", dest="conjugate"
+            "-n",
+            "--no-conjugations",
+            action="store_false",
+            dest="conjugate",
+            help="do not try to find conjugations of the input",
         )
         parser.add_argument(
             "-s",
             "--source-lang",
-            metavar="src-lang",
             default="en",
             dest="src_lang",
             choices=LANG_MAP.keys(),
+            help="source language",
         )
         parser.add_argument(
             "-d",
             "--dest-lang",
-            metavar="dst-lang",
             default="pl",
             dest="dst_lang",
             choices=LANG_MAP.keys(),
+            help="destination language",
         )
 
     def lookup_phrase(

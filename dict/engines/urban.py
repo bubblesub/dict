@@ -33,7 +33,7 @@ class UrbanEngine(BaseEngine[UrbanResult]):
             "-n",
             "--num",
             type=int,
-            help="How many definitions to print.",
+            help="how many definitions to print",
             default=DEFAULT_MAX_DEFINITIONS,
         )
 

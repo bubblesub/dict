@@ -113,12 +113,14 @@ class WordHippoEngine(BaseEngine[BaseWordHippoResult]):
             action="store_const",
             dest="lookup_mode",
             const=WordHippoLookupMode.SYNONYMS,
+            help="look for synonyms (default)",
         )
         parser.add_argument(
-            "-d",
+            "-m",
             action="store_const",
             dest="lookup_mode",
             const=WordHippoLookupMode.MEANINGS,
+            help="look for meanings",
         )
 
     def lookup_phrase(

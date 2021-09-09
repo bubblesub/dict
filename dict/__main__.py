@@ -30,7 +30,7 @@ def parse_args(args: list[str]) -> argparse.Namespace:
     """
     root_parser = argparse.ArgumentParser(
         prog="dict",
-        description="Looks up phrases in a chosen dictionary",
+        description="Looks up phrases in a chosen dictionary.",
         formatter_class=CustomHelpFormatter,
         add_help=False,
     )

@@ -20,7 +20,7 @@ from dict.__main__ import main
         ),
         (
             "wordhippo_meanings",
-            ["-d", "test"],
+            ["-m", "test"],
             (
                 "https://www.wordhippo.com/what-is/"
                 "the-meaning-of-the-word/test.html"

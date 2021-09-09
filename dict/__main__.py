@@ -3,6 +3,7 @@ import argparse
 import io
 import readline  # pylint: disable=unused-import
 import sys
+from typing import Optional
 
 from dict.colors import COLOR_ERROR, COLOR_PROMPT, COLOR_RESET
 from dict.engines import BaseEngine
@@ -14,29 +15,53 @@ def parse_args(args: list[str]) -> argparse.Namespace:
 
     :return: parsed command line arguments
     """
-    parser = argparse.ArgumentParser(
-        description="Looks up phrases in a chosen dictionary"
+    root_parser = argparse.ArgumentParser(
+        prog="dict",
+        description="Looks up phrases in a chosen dictionary",
+        add_help=False,
     )
-    parser.add_argument(
+    root_parser.add_argument(
         "-e",
         "--engine",
         choices=sum([cls.names for cls in BaseEngine.__subclasses__()], []),
-        required=True,
+        help="engine to use",
     )
-    parser.add_argument(
+    root_parser.add_argument(
         "-N",
         "--no-pager",
         action="store_false",
         dest="use_pager",
         help="disable pager in interactive mode",
     )
-    parser.add_argument("phrase", nargs="?")
-    ret, remaining_args = parser.parse_known_args(args)
-    engine: BaseEngine = next(
-        cls() for cls in BaseEngine.__subclasses__() if ret.engine in cls.names
+    root_parser.add_argument("phrase", nargs="?")
+
+    # first round: parse common options, do not interpret --help
+    ret, remaining_args = root_parser.parse_known_args(args)
+
+    # try to get the engine
+    engine: Optional[BaseEngine] = None
+    for cls in BaseEngine.__subclasses__():
+        if ret.engine in cls.names:
+            engine = cls()
+            break
+
+    # construct a child parser, add engine-specific options if applicable
+    main_parser = argparse.ArgumentParser(
+        prog=root_parser.prog,
+        description=root_parser.description,
+        parents=[root_parser],
     )
-    engine.decorate_arg_parser(parser)
-    ret = parser.parse_args(args + remaining_args)
+    if engine:
+        engine.decorate_arg_parser(main_parser)
+
+    # second round: parse everything, including --help, which raises SystemExit
+    ret = main_parser.parse_args(args + remaining_args)
+
+    # if --help was given, interpreting it raised SystemExit above, so at this
+    # point --engine is required to carry out with the normal program operation
+    if not ret.engine:
+        main_parser.error("the following arguments are required: -e/--engine")
+
     ret.engine = engine
     return ret
 

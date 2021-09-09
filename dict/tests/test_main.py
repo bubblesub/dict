@@ -32,10 +32,38 @@ class DummyEngine(BaseEngine[str]):
             print(result, file=file)
 
 
-def test_parse_args_required_arg_missing() -> None:
-    """Test decorating parse_args – optional argument missing."""
+def test_parse_args_no_engine(capsys) -> None:
+    """Test decorating parse_args – missing engine."""
+    with pytest.raises(SystemExit):
+        parse_args([])
+    assert "required: -e/--engine" in capsys.readouterr().err
+
+
+def test_parse_args_no_engine_help(capsys) -> None:
+    """Test decorating parse_args – help requested."""
+    with pytest.raises(SystemExit):
+        parse_args(["-h"])
+    stdout = capsys.readouterr().out
+    assert "usage" in stdout
+    assert "required: -e/--engine" not in stdout
+
+
+def test_parse_args_required_arg_missing(capsys) -> None:
+    """Test decorating parse_args – required argument missing."""
     with pytest.raises(SystemExit):
         parse_args(["-e", "dummy-engine"])
+    assert "required: -p/--pass" in capsys.readouterr().err
+
+
+def test_parse_args_required_arg_missing_help(capsys) -> None:
+    """Test decorating parse_args – required argument missing, help
+    requested.
+    """
+    with pytest.raises(SystemExit):
+        parse_args(["-e", "dummy-engine", "-h"])
+    stdout = capsys.readouterr().out
+    assert "usage" in stdout
+    assert "--pass" in stdout
 
 
 def test_parse_args_optional_arg_missing() -> None:

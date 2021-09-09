@@ -27,16 +27,6 @@ class UrbanEngine(BaseEngine[UrbanResult]):
 
     names = ["urban"]
 
-    @staticmethod
-    def decorate_arg_parser(parser: argparse.ArgumentParser) -> None:
-        parser.add_argument(
-            "-n",
-            "--num",
-            type=int,
-            help="how many definitions to print",
-            default=DEFAULT_MAX_DEFINITIONS,
-        )
-
     def lookup_phrase(
         self, args: argparse.Namespace, phrase: str
     ) -> Iterable[UrbanResult]:
@@ -47,7 +37,7 @@ class UrbanEngine(BaseEngine[UrbanResult]):
 
         for entry in list(
             sorted(content["list"], key=lambda item: -item["thumbs_up"])
-        )[0 : args.num]:
+        ):
             yield UrbanResult(
                 definition=entry["definition"],
                 example=entry["example"],

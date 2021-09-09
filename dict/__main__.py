@@ -69,8 +69,8 @@ def main(args: list[str]) -> None:
             try:
                 phrase = input(
                     f"{COLOR_PROMPT}"
-                    f"{parsed_args.engine.primary_name}> "
-                    f"{COLOR_RESET}"
+                    f"{parsed_args.engine.primary_name}>"
+                    f"{COLOR_RESET} "
                 )
             except (EOFError, KeyboardInterrupt):
                 break

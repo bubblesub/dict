@@ -10,6 +10,19 @@ from dict.engines import BaseEngine
 from dict.pager import pager
 
 
+class CustomHelpFormatter(argparse.HelpFormatter):
+    """An argparse help formatter which prints the values of choice options
+    only once.
+    """
+
+    def _format_action_invocation(self, action: argparse.Action) -> str:
+        if not action.option_strings or action.nargs == 0:
+            return super()._format_action_invocation(action)
+        default = self._get_default_metavar_for_optional(action)
+        args_string = self._format_args(action, default)
+        return ", ".join(action.option_strings) + " " + args_string
+
+
 def parse_args(args: list[str]) -> argparse.Namespace:
     """Parse command line arguments.
 
@@ -18,6 +31,7 @@ def parse_args(args: list[str]) -> argparse.Namespace:
     root_parser = argparse.ArgumentParser(
         prog="dict",
         description="Looks up phrases in a chosen dictionary",
+        formatter_class=CustomHelpFormatter,
         add_help=False,
     )
     root_parser.add_argument(
@@ -49,6 +63,7 @@ def parse_args(args: list[str]) -> argparse.Namespace:
     main_parser = argparse.ArgumentParser(
         prog=root_parser.prog,
         description=root_parser.description,
+        formatter_class=root_parser.formatter_class,
         parents=[root_parser],
     )
     if engine:

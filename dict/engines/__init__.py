@@ -5,6 +5,7 @@ from .jisho import JishoEngine
 from .jmdict import JMDictEngine
 from .reverso import ReversoEngine
 from .sjp import SJPEngine
+from .synonim import SynonimEngine
 from .urban import UrbanEngine
 from .wordhippo import WordHippoEngine
 
@@ -15,5 +16,6 @@ __all__ = [
     "JishoEngine",
     "ReversoEngine",
     "SJPEngine",
+    "SynonimEngine",
     "UrbanEngine",
 ]

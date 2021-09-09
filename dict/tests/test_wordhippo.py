@@ -28,7 +28,7 @@ from dict.__main__ import main
         ),
     ],
 )
-def test_word_hippo(
+def test_wordhippo(
     data_dir: Path,
     capsys,
     test_file_prefix: str,

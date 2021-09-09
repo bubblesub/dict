@@ -1,118 +1,122 @@
 [38;5;223m[48;5;58mwszystkie wyrazy[0m
-- amatorstwo              - ambicje                 - aspiracje
-- chęć                    - ciągoty                 - dążenie
-- dążność                 - dryg                    - dyspozycja
-- hobby                   - inklinacja              - konik
-- mania                   - miłośnictwo             - namiętność
-- obsesja                 - ochota                  - pasja
-- pęd                     - pociąg                  - podatność
-- popęd                   - powołanie               - predylekcja
-- predyspozycja           - preferencje             - przechył
-- sentyment               - skłonność               - słabość
-- sympatie                - talent                  - temperament
-- tendencja               - ukochanie               - umiłowanie
-- upodobanie              - usposobienie            - uzdolnienia
-- warunki                 - wola                    - wrażliwość
-- zacięcie                - zainteresowanie         - zakusy
-- zamiłowanie             - zapędy                  - zdolności
-- żyłka                   - erotyka                 - erotyzm
-- intymność               - łóżko                   - pożycie
-- seks                    - seksualizm              - seksualność
-- sfera intymna           - sprawy łóżkowe          - tajemnice alkowy
-- współżycie              - współżycie seksualne    - zmysłowość
-- życie intymne           - bogdanka                - dama serca
-- donna                   - droga                   - dulcynea
-- dziewczyna              - flama                   - kandydatka na żonę
-- kobieta                 - kochana                 - kochanka
-- królowa serca           - luba                    - miła
-- najdroższa              - narzeczona              - narzeczona czyjaś
-- nieboga                 - oblubienica             - pani serca
-- panna                   - przyjaciółka            - sympatia
-- ukochana                - umiłowana               - wybrana
-- wybranka                - chłopak                 - chłopiec
-- drogi                   - facet                   - jedyny
-- kandydat na męża        - kochanek                - kochany
-- kolega                  - luby                    - mąż
-- mężczyzna               - miły                    - najdroższy
-- najukochańszy           - narzeczony              - oblubieniec
-- pan                     - partner                 - przyjaciel
-- ukochany                - umiłowany               - wielbiciel
-- wybranek                - wybrany                 - afekt
-- feblik                  - głos serca              - przyjaźń
-- przywiązanie            - rozmiłowanie            - serce
-- uczucie                 - zaangażowanie           - żarliwość
-- animalizm               - chuć                    - ciało
-- cielesność              - Eros                    - erotyczność
-- flirt                   - gwałtowne uczucie       - jurność
-- kochanie                - lubieżność              - męskość
-- miłosność               - nieskromność            - ogień
-- płomień                 - popęd płciowy           - poryw
-- pożądanie               - pożądliwość             - romans
-- sensualizm              - somatyczność            - somatyzm
-- zakochanie              - zmysły                  - żar
-- żądza                   - amicycja                - bliskie stosunki
-- bliskość                - braterstwo              - czułość
-- emocja                  - jednolitość             - jednomyślność
-- jednorodność            - jedność                 - kolektywność
-- koleżeńskość            - koleżeństwo             - komitywa
-- lojalność               - łaskawość               - oddanie
-- partnerstwo             - pokrewność              - poufałość
-- prawdziwa przyjaźń      - przychylność            - przyjacielskie stosunki
-- przyjazne stosunki      - psia wierność           - serdeczność
-- solidarność             - spoufalenie             - więzy
-- wspólnota               - wzajemna życzliwość     - zaprzyjaźnienie
-- zażyłość                - zespołowość             - zgodność
-- zgranie                 - zwartość                - związek przyjaźni
-- zżycie                  - życzliwość              - dbałość
-- opieka                  - pieczołowitość          - poświęcenie
-- przytroczenie           - staranie                - troska
-- troskliwość             - uwaga                   - zajęcie
-- kochanie się            - kopulacja               - stosunek
-- stosunek płciowy        - szpachlowanie           - amok
-- bzik                    - chemia                  - ferwor
-- fiksacja                - fiok                    - fiś
-- kołowacizna             - obłąkanie               - obłęd
-- opętanie                - paranoja                - parodia
-- pomieszanie             - psychoza                - szajba
-- szaleństwo              - szał                    - świr
-- urojenie                - wariactwo               - zapał
-- zapamiętanie            - żywioł                  - ciepło
-- miłostka                - pokochanie              - rozkochanie
-- ulubienie               - uwielbienie             - zadurzenie
-- afektywność             - bodziec                 - ciągotka
-- fascynacja              - gorączka                - impuls
-- instynkt                - lepienie                - lgnięcie
-- lubienie                - oczarowanie             - pociąg do kogoś
-- podnieta                - pokusa                  - ponęta
-- priapizm                - przymilanie             - tentacja
-- uwiązanie               - więź                    - bakcyl
-- naśladownictwo          - podziwianie             - słabość do czegoś
-- smak                    - smykałka                - szwung
-- krótkotrwały romans     - ognistość               - płomienność
-- przelotny romans        - przygoda                - przygoda miłosna
-- adoracja                - adorowanie              - czczenie
-- darzenie miłością       - darzyć miłością         - emocjonalność
-- kochać                  - miłować                 - miłowanie
-- ubóstwianie             - uwielbianie             - wielbienie
-- zauroczenie             - miłość rodzinna         - ukochana osoba
-- apoteozowanie           - cześć                   - deifikowanie
-- gloryfikacja            - gloryfikowanie          - idealizowanie
-- miłosierdzie            - nadskakiwanie           - podziw
-- wywyższenie             - zachwyt
+- amatorstwo           - ambicje              - aspiracje
+- chęć                 - ciągoty              - dążenie
+- dążność              - dryg                 - dyspozycja
+- hobby                - inklinacja           - konik
+- mania                - miłośnictwo          - namiętność
+- obsesja              - ochota               - pasja
+- pęd                  - pociąg               - podatność
+- popęd                - powołanie            - predylekcja
+- predyspozycja        - preferencje          - przechył
+- sentyment            - skłonność            - słabość
+- sympatie             - talent               - temperament
+- tendencja            - ukochanie            - umiłowanie
+- upodobanie           - usposobienie         - uzdolnienia
+- warunki              - wola                 - wrażliwość
+- zacięcie             - zainteresowanie      - zakusy
+- zamiłowanie          - zapędy               - zdolności
+- żyłka                - erotyka              - erotyzm
+- intymność            - łóżko                - pożycie
+- seks                 - seksualizm           - seksualność
+- sfera intymna        - sprawy łóżkowe       - tajemnice alkowy
+- współżycie           - współżycie seksualne - zmysłowość
+- życie intymne        - bogdanka             - dama serca
+- donna                - droga                - dulcynea
+- dziewczyna           - flama                - kandydatka na żonę
+- kobieta              - kochana              - kochanka
+- królowa serca        - luba                 - miła
+- najdroższa           - narzeczona           - narzeczona czyjaś
+- nieboga              - oblubienica          - pani serca
+- panna                - przyjaciółka         - sympatia
+- ukochana             - umiłowana            - wybrana
+- wybranka             - chłopak              - chłopiec
+- drogi                - facet                - jedyny
+- kandydat na męża     - kochanek             - kochany
+- kolega               - luby                 - mąż
+- mężczyzna            - miły                 - najdroższy
+- najukochańszy        - narzeczony           - oblubieniec
+- pan                  - partner              - przyjaciel
+- ukochany             - umiłowany            - wielbiciel
+- wybranek             - wybrany              - afekt
+- feblik               - głos serca           - przyjaźń
+- przywiązanie         - rozmiłowanie         - serce
+- uczucie              - zaangażowanie        - żarliwość
+- animalizm            - chuć                 - ciało
+- cielesność           - Eros                 - erotyczność
+- flirt                - gwałtowne uczucie    - jurność
+- kochanie             - lubieżność           - męskość
+- miłosność            - nieskromność         - ogień
+- płomień              - popęd płciowy        - poryw
+- pożądanie            - pożądliwość          - romans
+- sensualizm           - somatyczność         - somatyzm
+- zakochanie           - zmysły               - żar
+- żądza                - amicycja             - bliskie stosunki
+- bliskość             - braterstwo           - czułość
+- emocja               - jednolitość          - jednomyślność
+- jednorodność         - jedność              - kolektywność
+- koleżeńskość         - koleżeństwo          - komitywa
+- lojalność            - łaskawość            - oddanie
+- partnerstwo          - pokrewność           - poufałość
+- prawdziwa przyjaźń   - przychylność         - przyjacielskie stosunki
+- przyjazne stosunki   - psia wierność        - serdeczność
+- solidarność          - spoufalenie          - więzy
+- wspólnota            - wzajemna życzliwość  - zaprzyjaźnienie
+- zażyłość             - zespołowość          - zgodność
+- zgranie              - zwartość             - związek przyjaźni
+- zżycie               - życzliwość           - dbałość
+- opieka               - pieczołowitość       - poświęcenie
+- przytroczenie        - staranie             - troska
+- troskliwość          - uwaga                - zajęcie
+- kochanie się         - kopulacja            - stosunek
+- stosunek płciowy     - szpachlowanie        - amok
+- bzik                 - chemia               - ferwor
+- fiksacja             - fiok                 - fiś
+- kołowacizna          - obłąkanie            - obłęd
+- opętanie             - paranoja             - parodia
+- pomieszanie          - psychoza             - szajba
+- szaleństwo           - szał                 - świr
+- urojenie             - wariactwo            - zapał
+- zapamiętanie         - żywioł               - ciepło
+- miłostka             - pokochanie           - rozkochanie
+- ulubienie            - uwielbienie          - zadurzenie
+- afektywność          - bodziec              - ciągotka
+- fascynacja           - gorączka             - impuls
+- instynkt             - lepienie             - lgnięcie
+- lubienie             - oczarowanie          - pociąg do kogoś
+- podnieta             - pokusa               - ponęta
+- priapizm             - przymilanie          - tentacja
+- uwiązanie            - więź                 - bakcyl
+- naśladownictwo       - podziwianie          - słabość do czegoś
+- smak                 - smykałka             - szwung
+- krótkotrwały romans  - ognistość            - płomienność
+- przelotny romans     - przygoda             - przygoda miłosna
+- adoracja             - adorowanie           - czczenie
+- darzenie miłością    - darzyć miłością      - emocjonalność
+- kochać               - miłować              - miłowanie
+- ubóstwianie          - uwielbianie          - wielbienie
+- zauroczenie          - miłość rodzinna      - ukochana osoba
+- apoteozowanie        - cześć                - deifikowanie
+- gloryfikacja         - gloryfikowanie       - idealizowanie
+- miłosierdzie         - nadskakiwanie        - podziw
+- wywyższenie          - zachwyt
 
 [38;5;223m[48;5;58mw kontekście posiadania zamiłowania do robienia czegoś[0m
-- amatorstwo      - ambicje         - aspiracje       - chęć
-- ciągoty         - dążenie         - dążność         - dryg
-- dyspozycja      - hobby           - inklinacja      - konik
-- mania           - miłośnictwo     - namiętność      - obsesja
-- ochota          - pasja           - pęd             - pociąg
-- podatność       - popęd           - powołanie       - predylekcja
-- predyspozycja   - preferencje     - przechył        - sentyment
-- skłonność       - słabość         - sympatie        - talent
-- temperament     - tendencja       - ukochanie       - umiłowanie
-- upodobanie      - usposobienie    - uzdolnienia     - warunki
-- wola            - wrażliwość      - zacięcie        - zainteresowanie
-- zakusy          - zamiłowanie     - zapędy          - zdolności
+- amatorstwo           - ambicje              - aspiracje
+- chęć                 - ciągoty              - dążenie
+- dążność              - dryg                 - dyspozycja
+- hobby                - inklinacja           - konik
+- mania                - miłośnictwo          - namiętność
+- obsesja              - ochota               - pasja
+- pęd                  - pociąg               - podatność
+- popęd                - powołanie            - predylekcja
+- predyspozycja        - preferencje          - przechył
+- sentyment            - skłonność            - słabość
+- sympatie             - talent               - temperament
+- tendencja            - ukochanie            - umiłowanie
+- upodobanie           - usposobienie         - uzdolnienia
+- warunki              - wola                 - wrażliwość
+- zacięcie             - zainteresowanie      - zakusy
+- zamiłowanie          - zapędy               - zdolności
 - żyłka
 
 [38;5;223m[48;5;58mjako współżycie seksualne[0m
@@ -124,123 +128,146 @@
 - życie intymne
 
 [38;5;223m[48;5;58mw odniesieniu do ukochanej kobiety[0m
-- bogdanka           - dama serca         - donna
-- droga              - dulcynea           - dziewczyna
-- flama              - kandydatka na żonę - kobieta
-- kochana            - kochanka           - królowa serca
-- luba               - miła               - najdroższa
-- narzeczona         - narzeczona czyjaś  - nieboga
-- oblubienica        - pani serca         - panna
-- przyjaciółka       - sympatia           - ukochana
-- umiłowana          - wybrana            - wybranka
+- bogdanka             - dama serca           - donna
+- droga                - dulcynea             - dziewczyna
+- flama                - kandydatka na żonę   - kobieta
+- kochana              - kochanka             - królowa serca
+- luba                 - miła                 - najdroższa
+- narzeczona           - narzeczona czyjaś    - nieboga
+- oblubienica          - pani serca           - panna
+- przyjaciółka         - sympatia             - ukochana
+- umiłowana            - wybrana              - wybranka
 
 [38;5;223m[48;5;58mw odniesieniu do ukochanego mężczyzny[0m
-- chłopak          - chłopiec         - drogi            - facet
-- jedyny           - kandydat na męża - kochanek         - kochany
-- kolega           - luby             - mąż              - mężczyzna
-- miły             - najdroższy       - najukochańszy    - narzeczony
-- oblubieniec      - pan              - partner          - przyjaciel
-- sympatia         - ukochany         - umiłowany        - wielbiciel
-- wybranek         - wybrany
+- chłopak              - chłopiec             - drogi
+- facet                - jedyny               - kandydat na męża
+- kochanek             - kochany              - kolega
+- luby                 - mąż                  - mężczyzna
+- miły                 - najdroższy           - najukochańszy
+- narzeczony           - oblubieniec          - pan
+- partner              - przyjaciel           - sympatia
+- ukochany             - umiłowany            - wielbiciel
+- wybranek             - wybrany
 
 [38;5;223m[48;5;58mw kontekście połączenia kochających się ludzi[0m
-- afekt         - feblik        - głos serca    - namiętność    - przyjaźń
-- przywiązanie  - rozmiłowanie  - sentyment     - serce         - sympatia
-- uczucie       - zaangażowanie - żarliwość
+- afekt                - feblik               - głos serca
+- namiętność           - przyjaźń             - przywiązanie
+- rozmiłowanie         - sentyment            - serce
+- sympatia             - uczucie              - zaangażowanie
+- żarliwość
 
 [38;5;223m[48;5;58mw kontekście namiętności[0m
-- afekt             - animalizm         - chuć              - ciało
-- cielesność        - Eros              - erotyczność       - erotyzm
-- flirt             - gwałtowne uczucie - intymność         - jurność
-- kochanie          - lubieżność        - męskość           - miłosność
-- namiętność        - nieskromność      - ogień             - pasja
-- płomień           - popęd płciowy     - poryw             - pożądanie
-- pożądliwość       - romans            - seks              - sensualizm
-- somatyczność      - somatyzm          - temperament       - uczucie
-- zaangażowanie     - zakochanie        - zmysłowość        - zmysły
-- żar               - żarliwość         - żądza
+- afekt                - animalizm            - chuć
+- ciało                - cielesność           - Eros
+- erotyczność          - erotyzm              - flirt
+- gwałtowne uczucie    - intymność            - jurność
+- kochanie             - lubieżność           - męskość
+- miłosność            - namiętność           - nieskromność
+- ogień                - pasja                - płomień
+- popęd płciowy        - poryw                - pożądanie
+- pożądliwość          - romans               - seks
+- sensualizm           - somatyczność         - somatyzm
+- temperament          - uczucie              - zaangażowanie
+- zakochanie           - zmysłowość           - zmysły
+- żar                  - żarliwość            - żądza
 
 [38;5;223m[48;5;58mw kontekście uczuć braterskich[0m
-- amicycja                - bliskie stosunki        - bliskość
-- braterstwo              - czułość                 - emocja
-- jednolitość             - jednomyślność           - jednorodność
-- jedność                 - kolektywność            - koleżeńskość
-- koleżeństwo             - komitywa                - lojalność
-- łaskawość               - namiętność              - oddanie
-- partnerstwo             - pokrewność              - poufałość
-- prawdziwa przyjaźń      - przychylność            - przyjacielskie stosunki
-- przyjazne stosunki      - przyjaźń                - przywiązanie
-- psia wierność           - sentyment               - serdeczność
-- solidarność             - spoufalenie             - sympatia
-- uczucie                 - więzy                   - wspólnota
-- wzajemna życzliwość     - zaangażowanie           - zaprzyjaźnienie
-- zażyłość                - zespołowość             - zgodność
-- zgranie                 - zwartość                - związek przyjaźni
-- zżycie                  - życzliwość
+- amicycja             - bliskie stosunki     - bliskość
+- braterstwo           - czułość              - emocja
+- jednolitość          - jednomyślność        - jednorodność
+- jedność              - kolektywność         - koleżeńskość
+- koleżeństwo          - komitywa             - lojalność
+- łaskawość            - namiętność           - oddanie
+- partnerstwo          - pokrewność           - poufałość
+- prawdziwa przyjaźń   - przychylność         - przyjacielskie stosunki
+- przyjazne stosunki   - przyjaźń             - przywiązanie
+- psia wierność        - sentyment            - serdeczność
+- solidarność          - spoufalenie          - sympatia
+- uczucie              - więzy                - wspólnota
+- wzajemna życzliwość  - zaangażowanie        - zaprzyjaźnienie
+- zażyłość             - zespołowość          - zgodność
+- zgranie              - zwartość             - związek przyjaźni
+- zżycie               - życzliwość
 
 [38;5;223m[48;5;58mw kontekście uczuciowego związania z czymś[0m
-- afekt           - czułość         - dbałość         - lojalność
-- namiętność      - oddanie         - opieka          - pieczołowitość
-- pociąg          - poświęcenie     - pożądanie       - przychylność
-- przytroczenie   - przywiązanie    - staranie        - sympatia
-- troska          - troskliwość     - uczucie         - uwaga
-- zainteresowanie - zajęcie         - życzliwość
+- afekt                - czułość              - dbałość
+- lojalność            - namiętność           - oddanie
+- opieka               - pieczołowitość       - pociąg
+- poświęcenie          - pożądanie            - przychylność
+- przytroczenie        - przywiązanie         - staranie
+- sympatia             - troska               - troskliwość
+- uczucie              - uwaga                - zainteresowanie
+- zajęcie              - życzliwość
 
 [38;5;223m[48;5;58mw kontekście erotycznym[0m
-- kochanie się     - kopulacja        - seks             - stosunek
-- stosunek płciowy - szpachlowanie
+- kochanie się         - kopulacja            - seks
+- stosunek             - stosunek płciowy     - szpachlowanie
 
 [38;5;223m[48;5;58mw kontekście oszalenia na jakimś punkcie[0m
-- amok         - bzik         - chemia       - ferwor       - fiksacja
-- fiok         - fiś          - kołowacizna  - mania        - namiętność
-- obłąkanie    - obłęd        - obsesja      - ogień        - opętanie
-- paranoja     - parodia      - pasja        - pomieszanie  - psychoza
-- szajba       - szaleństwo   - szał         - świr         - urojenie
-- wariactwo    - zamiłowanie  - zapał        - zapamiętanie - żywioł
+- amok                 - bzik                 - chemia
+- ferwor               - fiksacja             - fiok
+- fiś                  - kołowacizna          - mania
+- namiętność           - obłąkanie            - obłęd
+- obsesja              - ogień                - opętanie
+- paranoja             - parodia              - pasja
+- pomieszanie          - psychoza             - szajba
+- szaleństwo           - szał                 - świr
+- urojenie             - wariactwo            - zamiłowanie
+- zapał                - zapamiętanie         - żywioł
 
 [38;5;223m[48;5;58mw kontekście miłości[0m
-- ciepło       - kochanie     - miłostka     - pokochanie   - rozkochanie
-- rozmiłowanie - ukochanie    - ulubienie    - umiłowanie   - uwielbienie
-- zadurzenie   - zakochanie
+- ciepło               - kochanie             - miłostka
+- pokochanie           - rozkochanie          - rozmiłowanie
+- ukochanie            - ulubienie            - umiłowanie
+- uwielbienie          - zadurzenie           - zakochanie
 
 [38;5;223m[48;5;58mjako związanie emocjonalne[0m
-- afekt       - namiętność  - sympatia    - uwielbienie - zakochanie
+- afekt                - namiętność           - sympatia
+- uwielbienie          - zakochanie
 
 [38;5;223m[48;5;58mw kontekście skłonności ku komuś[0m
-- afekt           - afektywność     - bodziec         - ciągotka
-- emocja          - fascynacja      - gorączka        - impuls
-- instynkt        - lepienie        - lgnięcie        - lubienie
-- namiętność      - oczarowanie     - pociąg          - pociąg do kogoś
-- podnieta        - pokusa          - ponęta          - pożądanie
-- priapizm        - przychylność    - przymilanie     - przywiązanie
-- sentyment       - skłonność       - sympatia        - tentacja
-- uczucie         - uwiązanie       - więź            - zainteresowanie
-- zamiłowanie     - zapał
+- afekt                - afektywność          - bodziec
+- ciągotka             - emocja               - fascynacja
+- gorączka             - impuls               - instynkt
+- lepienie             - lgnięcie             - lubienie
+- namiętność           - oczarowanie          - pociąg
+- pociąg do kogoś      - podnieta             - pokusa
+- ponęta               - pożądanie            - priapizm
+- przychylność         - przymilanie          - przywiązanie
+- sentyment            - skłonność            - sympatia
+- tentacja             - uczucie              - uwiązanie
+- więź                 - zainteresowanie      - zamiłowanie
+- zapał
 
 [38;5;223m[48;5;58mjako słabość do kogoś lub czegoś[0m
-- bakcyl            - dryg              - hobby             - miłośnictwo
-- naśladownictwo    - pasja             - podziwianie       - słabość do czegoś
-- smak              - smykałka          - szwung            - upodobanie
+- bakcyl               - dryg                 - hobby
+- miłośnictwo          - naśladownictwo       - pasja
+- podziwianie          - słabość do czegoś    - smak
+- smykałka             - szwung               - upodobanie
 - zamiłowanie
 
 [38;5;223m[48;5;58mw odniesieniu do krótkiego romansu[0m
-- flirt               - kochanie            - krótkotrwały romans
-- miłostka            - namiętność          - ognistość
-- płomienność         - przelotny romans    - przygoda
-- przygoda miłosna    - romans              - żar
+- flirt                - kochanie             - krótkotrwały romans
+- miłostka             - namiętność           - ognistość
+- płomienność          - przelotny romans     - przygoda
+- przygoda miłosna     - romans               - żar
 
 [38;5;223m[48;5;58mjako uczucie[0m
-- adoracja          - adorowanie        - czczenie          - darzenie miłością
-- darzyć miłością   - emocjonalność     - fascynacja        - kochać
-- kochanie          - miłować           - miłowanie         - pożądanie
-- ubóstwianie       - umiłowanie        - uwielbianie       - uwielbienie
-- wielbienie        - zauroczenie
+- adoracja             - adorowanie           - czczenie
+- darzenie miłością    - darzyć miłością      - emocjonalność
+- fascynacja           - kochać               - kochanie
+- miłować              - miłowanie            - pożądanie
+- ubóstwianie          - umiłowanie           - uwielbianie
+- uwielbienie          - wielbienie           - zauroczenie
 
 [38;5;223m[48;5;58mw odniesieniu do osoby[0m
-- kochanie        - miłość rodzinna - sympatia        - ukochana osoba
+- kochanie             - miłość rodzinna      - sympatia
+- ukochana osoba
 
 [38;5;223m[48;5;58mjako rodzaj uwielbienia[0m
-- adoracja       - apoteozowanie  - czczenie       - cześć
-- deifikowanie   - gloryfikacja   - gloryfikowanie - idealizowanie
-- miłosierdzie   - nadskakiwanie  - podziw         - ubóstwianie
-- uwielbienie    - wielbienie     - wywyższenie    - zachwyt
+- adoracja             - apoteozowanie        - czczenie
+- cześć                - deifikowanie         - gloryfikacja
+- gloryfikowanie       - idealizowanie        - miłosierdzie
+- nadskakiwanie        - podziw               - ubóstwianie
+- uwielbienie          - wielbienie           - wywyższenie
+- zachwyt

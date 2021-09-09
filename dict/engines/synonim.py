@@ -67,6 +67,11 @@ class SynonimEngine(BaseEngine[SynonimResult]):
     def print_results(
         self, results: Iterable[SynonimResult], file: IO[str]
     ) -> None:
+        column_size = max(
+            len(synonym) for result in results for synonym in result.synonyms
+        )
         for result in results:
             print(f"{COLOR_HIGHLIGHT}{result.meaning}{COLOR_RESET}", file=file)
-            print_in_columns(result.synonyms, file=file)
+            print_in_columns(
+                result.synonyms, file=file, column_size=column_size
+            )

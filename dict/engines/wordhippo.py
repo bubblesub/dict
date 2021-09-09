@@ -39,10 +39,19 @@ class BaseWordHippoResult:
 
     word_type: str
 
-    def print_to_stream(self, file: IO[str]) -> None:
+    @property
+    def column_size(self) -> int:
+        """Maximum item length to align the results in a table.
+
+        :return: max item length
+        """
+        raise NotImplementedError("not implemented")  # pragma: no cover
+
+    def print_to_stream(self, file: IO[str], column_size: int) -> None:
         """Print self to the given stream.
 
         :param file: output stream
+        :param column_size: column size for aligning the results in a table
         """
         raise NotImplementedError("not implemented")  # pragma: no cover
 
@@ -56,7 +65,11 @@ class WordHippoMeaningResult(BaseWordHippoResult):
 
     meanings: list[str]
 
-    def print_to_stream(self, file: IO[str]) -> None:
+    @property
+    def column_size(self) -> int:
+        return max(map(len, self.meanings))
+
+    def print_to_stream(self, file: IO[str], column_size: int) -> None:
         print(COLOR_HIGHLIGHT + self.word_type + COLOR_RESET, file=file)
         for meaning in self.meanings:
             print(f"- {meaning}", file=file)
@@ -70,14 +83,22 @@ class WordHippoSynonymResult(BaseWordHippoResult):
     word_desc: str
     synonyms: list[str]
 
-    def print_to_stream(self, file: IO[str]) -> None:
+    @property
+    def column_size(self) -> int:
+        return max(map(len, self.synonyms))
+
+    def print_to_stream(self, file: IO[str], column_size: int) -> None:
         print(
             COLOR_HIGHLIGHT
             + f"{self.word_type} ({self.word_desc})"
             + COLOR_RESET,
             file=file,
         )
-        print_in_columns((synonym for synonym in self.synonyms), file=file)
+        print_in_columns(
+            (synonym for synonym in self.synonyms),
+            column_size=column_size,
+            file=file,
+        )
 
 
 class WordHippoEngine(BaseEngine[BaseWordHippoResult]):
@@ -154,5 +175,6 @@ class WordHippoEngine(BaseEngine[BaseWordHippoResult]):
     def print_results(
         self, results: Iterable[BaseWordHippoResult], file: IO[str]
     ) -> None:
+        column_size = max(result.column_size for result in results)
         for result in results:
-            result.print_to_stream(file=file)
+            result.print_to_stream(file=file, column_size=column_size)

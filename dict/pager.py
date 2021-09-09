@@ -36,14 +36,18 @@ def pager(text: str) -> None:
             pass
 
 
-def print_in_columns(items: Iterable[str], file: IO[str]) -> None:
+def print_in_columns(
+    items: Iterable[str], file: IO[str], column_size: int = 0
+) -> None:
     """Print items in columns, filling the terminal horizontally.
 
     :param items: list of phrases to print in columns
     :param file: output stream
+    :param column_size: max item length, if empty, calculate automatically
     """
     items = [f"- {item} " for item in items]
-    column_size = max((len(item) for item in items), default=5)
+    if not column_size:
+        column_size = max((len(item) for item in items), default=5)
     term_size = shutil.get_terminal_size()
     columns = term_size.columns // column_size
     while items:

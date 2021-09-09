@@ -6,7 +6,7 @@ from collections.abc import Iterable
 from dataclasses import dataclass
 from io import BytesIO
 from pathlib import Path
-from typing import IO, Optional
+from typing import IO, Any, Optional
 
 import xdg
 
@@ -214,13 +214,42 @@ def download_edict2_if_needed() -> None:
         )
 
 
+def get_result_weight(
+    logic_pattern: re.Pattern[str], result: Edict2Result
+) -> Optional[Any]:
+    """Return a weight for a given result and a logic pattern.
+
+    Used to filter and sort the results. Higher values are displayed first.
+    Weight set to none means the result shouldn't be displayed.
+
+    :param result: result to get the weight for
+    :param logic_pattern: pattern to look for in the result
+    :return: result's weight if it matches the logic pattern, None otherwise
+    """
+    subject_groups = (
+        [jap.kana for jap in result.japanese],
+        [jap.kanji for jap in result.japanese],
+        [glossary.english for glossary in result.glossaries],
+    )
+
+    for subject_group in subject_groups:
+        if any(logic_pattern.search(subject) for subject in subject_group):
+            return (
+                "P" in result.tags,
+                -(sum(len(jap.kana) for jap in result.japanese))
+                / len(result.japanese),
+            )
+
+    return None
+
+
 class Edict2Engine(BaseEngine[Edict2Result]):
     """Edict2 engine (a Japanese textfile dictionary).
 
     Downloads Edict EUC-JP gzipped file, where each entry is represented by a
     single physical line. The search process is divided into two steps: first
-    the entry is scanned with the input phrase interpreted as a regex. The
-    physical lines that match are then parsed into logic entries and further
+    the physical lines are filtered by checking if they contain a given phrase.
+    The ones that match are then parsed into logic entries and further
     filtered, this time within specific fields.
     """
 
@@ -231,20 +260,25 @@ class Edict2Engine(BaseEngine[Edict2Result]):
     ) -> Iterable[Edict2Result]:
         download_edict2_if_needed()
 
-        pattern = re.compile(phrase, flags=re.I)
+        physical_pattern = re.compile(
+            phrase.lstrip("^").rstrip("$"), flags=re.I
+        )
+        logic_pattern = re.compile(phrase, flags=re.I)
+
+        results: list[tuple[Edict2Result, Any]] = []
 
         with CACHE_PATH.open("r") as handle:
             for line in handle:
-                if pattern.search(line):
-                    result = parse_edict2_line(line)
-                    if any(
-                        pattern.search(jap.kana) or pattern.search(jap.kanji)
-                        for jap in result.japanese
-                    ) or any(
-                        pattern.search(glossary.english)
-                        for glossary in result.glossaries
-                    ):
-                        yield result
+                if not physical_pattern.search(line):
+                    continue
+
+                result = parse_edict2_line(line)
+                weight = get_result_weight(logic_pattern, result)
+                if weight is not None:
+                    results.append((result, weight))
+
+        results.sort(key=lambda item: item[1], reverse=True)
+        return [result for result, weight in results]
 
     def print_results(
         self, results: Iterable[Edict2Result], file: IO[str]

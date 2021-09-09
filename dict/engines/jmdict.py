@@ -7,7 +7,7 @@ from collections.abc import Iterable
 from dataclasses import dataclass
 from io import BytesIO
 from pathlib import Path
-from typing import IO, Optional, cast
+from typing import IO, Any, Optional, cast
 
 import lxml
 import xdg
@@ -20,6 +20,14 @@ from dict.http import download
 DOWNLOAD_URL = "http://ftp.edrdg.org/pub/Nihongo/JMdict_e.gz"
 XML_CACHE_PATH = Path(xdg.XDG_CACHE_HOME) / "jmdict.xml"
 INDEX_CACHE_PATH = Path(xdg.XDG_CACHE_HOME) / "jmdict.jsonl"
+
+COMMON_TAGS = (
+    "ichi1",
+    "news1",
+    "spec1",
+    "spec2",
+    "gai1",
+)  # same as (P) marker in edict2
 
 
 def uniq(seq):
@@ -224,6 +232,35 @@ def create_jmdict_index_if_needed() -> None:
             print(entry_to_line(entry), file=handle)
 
 
+def get_result_weight(
+    logic_pattern: re.Pattern[str], result: JMDictResult
+) -> Optional[Any]:
+    """Return a weight for a given result and a logic pattern.
+
+    Used to filter and sort the results. Higher values are displayed first.
+    Weight set to none means the result shouldn't be displayed.
+
+    :param result: result to get the weight for
+    :param logic_pattern: pattern to look for in the result
+    :return: result's weight if it matches the logic pattern, None otherwise
+    """
+    subject_groups = (
+        [kanji.kanji for kanji in result.kanji],
+        [reading.reading for reading in result.readings],
+        [meaning for sense in result.senses for meaning in sense.meanings],
+    )
+
+    for subject_group in subject_groups:
+        if any(logic_pattern.search(subject) for subject in subject_group):
+            return (
+                any(common_tag in result.tags for common_tag in COMMON_TAGS),
+                -(sum(len(reading.reading) for reading in result.readings))
+                / len(result.readings),
+            )
+
+    return None
+
+
 class JMDictEngine(BaseEngine[JMDictResult]):
     """JMDict engine (a Japanese textfile dictionary).
 
@@ -243,28 +280,25 @@ class JMDictEngine(BaseEngine[JMDictResult]):
         download_jmdict_xml_if_needed()
         create_jmdict_index_if_needed()
 
-        pattern = re.compile(phrase, flags=re.I)
+        physical_pattern = re.compile(
+            phrase.lstrip("^").rstrip("$"), flags=re.I
+        )
+        logic_pattern = re.compile(phrase, flags=re.I)
+
+        results: list[tuple[JMDictResult, Any]] = []
 
         with INDEX_CACHE_PATH.open("r") as handle:
             for line in handle:
-                if pattern.search(line):
-                    result = entry_from_line(line)
-                    if (
-                        any(
-                            pattern.search(kanji.kanji)
-                            for kanji in result.kanji
-                        )
-                        or any(
-                            pattern.search(reading.reading)
-                            for reading in result.readings
-                        )
-                        or any(
-                            pattern.search(meaning)
-                            for sense in result.senses
-                            for meaning in sense.meanings
-                        )
-                    ):
-                        yield result
+                if not physical_pattern.search(line):
+                    continue
+
+                result = entry_from_line(line)
+                weight = get_result_weight(logic_pattern, result)
+                if weight is not None:
+                    results.append((result, weight))
+
+        results.sort(key=lambda item: item[1], reverse=True)
+        return [result for result, weight in results]
 
     def print_results(
         self, results: Iterable[JMDictResult], file: IO[str]
@@ -276,7 +310,7 @@ class JMDictEngine(BaseEngine[JMDictResult]):
                 print(COLOR_RESET, file=file)
             for reading in result.readings:
                 print(COLOR_HIGHLIGHT, end="", file=file)
-                print(reading.reading, end="", file=file)
+                print(f"({reading.reading})", end="", file=file)
                 print(COLOR_RESET, file=file)
             print("[", end="", file=file)
             print(", ".join(result.tags), end="", file=file)

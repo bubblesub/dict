@@ -1,0 +1,167 @@
+[38;5;223m[48;5;58mwszystkie wyrazy[0m
+- pogłębiać              - pomnażać               - poszerzać
+- powiększać             - rozbudowywać           - rozkręcać
+- rozszerzać             - rozwijać               - uwielokrotniać
+- zwielokrotniać         - zwiększać              - podwajać
+- potrajać               - ustokrotniać           - zdwajać
+- doładowywać            - dołączać               - dopełniać
+- dopłacać               - dorzucać               - dowalać
+- partycypować           - przywalać              - wzbogacać
+- zasilać                - dodawać                - dokładać
+- dopowiadać             - wkomponowywać          - włączać
+- wpisywać               - wplatać                - wstawiać
+- wsztukowywać           - kompensować            - nadganiać
+- nadrabiać              - naprawiać              - odpracowywać
+- odrabiać               - podganiać              - rekompensować
+- wyrównywać             - dobierać               - dopakowywać
+- dosypywać              - kompletować            - dodać
+- dołożyć                - dopowiedzieć           - dorzucić
+- dorzucić parę słów     - dośpiewać              - kończyć wypowiedź
+- napomknąć              - uzupełnić              - wspomnieć
+- wzmiankować            - zasygnalizować         - czynić kompletnym
+- wypełniać              - adiustować             - korygować
+- modyfikować            - nanosić poprawki       - poprawiać
+- robić korektę          - aktualizować           - nowelizować
+- przywracać wartość     - uaktualniać            - udoskonalać
+- waloryzować            - podrzucać              - uzupełniać coś
+- przyłączać             - wcielać                - przyczepiać
+- przyprawiać            - sztukować              - przysypywać
+- dokładać do czegoś     - powiększyć             - przydawać
+- spotęgować             - nadmieniać             - wtrącać
+- dokompletować          - dokompletowywać        - dolać
+- dopełnić               - nalać do pełna         - napełnić
+- przylać                - zapełniać              - dolewać
+- napełniać              - przylewać              - instalować coś
+- opatrywać              - poprzedzać             - zaopatrywać
+- zaopatrywać w coś      - adnotować              - dekretować
+- dopisywać              - notować                - uzupełniać napisany tekst
+- uzupełniać tekst       - dorabiać               - dosztukowywać
+
+[38;5;223m[48;5;58mw odniesieniu do uwielokratniania czegoś[0m
+- pogłębiać              - pomnażać               - poszerzać
+- powiększać             - rozbudowywać           - rozkręcać
+- rozszerzać             - rozwijać               - uwielokrotniać
+- zwielokrotniać         - zwiększać
+
+[38;5;223m[48;5;58mw odniesieniu do rozkręcania czegoś[0m
+- podwajać               - pomnażać               - poszerzać
+- potrajać               - powiększać             - rozbudowywać
+- rozkręcać              - rozwijać               - ustokrotniać
+- uwielokrotniać         - zdwajać                - zwielokrotniać
+- zwiększać
+
+[38;5;223m[48;5;58mw kontekście uzupełniania czegoś[0m
+- doładowywać            - dołączać               - dopełniać
+- dopłacać               - dorzucać               - dowalać
+- partycypować           - przywalać              - wzbogacać
+- zasilać
+
+[38;5;223m[48;5;58mw kontekście dołączania czegoś do czegoś[0m
+- dodawać                - dokładać               - dołączać
+- dopowiadać             - dorzucać               - wkomponowywać
+- włączać                - wpisywać               - wplatać
+- wstawiać               - wsztukowywać
+
+[38;5;223m[48;5;58modnośnie odrabiania zaległości[0m
+- dopełniać              - kompensować            - nadganiać
+- nadrabiać              - naprawiać              - odpracowywać
+- odrabiać               - podganiać              - rekompensować
+- wyrównywać
+
+[38;5;223m[48;5;58mw odniesieniu do doładowywania czegoś[0m
+- dobierać               - dodawać                - dokładać
+- doładowywać            - dołączać               - dopakowywać
+- dopełniać              - dorzucać               - dosypywać
+- dowalać                - kompletować            - przywalać
+- zasilać
+
+[38;5;223m[48;5;58mw kontekście uzupełnienia wypowiedzi[0m
+- dodać                  - dołożyć                - dopełniać
+- dopowiadać             - dopowiedzieć           - dorzucić
+- dorzucić parę słów     - dośpiewać              - kończyć wypowiedź
+- napomknąć              - uzupełnić              - wspomnieć
+- wzmiankować            - zasygnalizować
+
+[38;5;223m[48;5;58modnośnie dopełniania czegoś[0m
+- dopełniać              - dorzucać               - kompletować
+- nadrabiać              - poszerzać              - wyrównywać
+- zasilać
+
+[38;5;223m[48;5;58mw kontekście czynienia czegoś kompletnym[0m
+- czynić kompletnym      - dopełniać              - kompletować
+- wypełniać              - wyrównywać
+
+[38;5;223m[48;5;58mw kontekście korekcyjnym[0m
+- adiustować             - korygować              - modyfikować
+- nanosić poprawki       - poprawiać              - robić korektę
+
+[38;5;223m[48;5;58mw kontekście nowelizacyjnym[0m
+- aktualizować           - modyfikować            - nowelizować
+- poprawiać              - przywracać wartość     - uaktualniać
+- udoskonalać            - waloryzować
+
+[38;5;223m[48;5;58mjako określenie uzupełniania czegoś[0m
+- dodawać                - dokładać               - dorzucać
+- kompletować            - podrzucać              - uzupełniać coś
+- uzupełnić
+
+[38;5;223m[48;5;58modnośnie włączania czegoś do jakiegoś zbioru[0m
+- dobierać               - dodawać                - dokładać
+- dołączać               - dopełniać              - dorzucać
+- przyłączać             - wcielać                - włączać
+- zasilać
+
+[38;5;223m[48;5;58mw odniesieniu do przyczepiania czegoś do czegoś[0m
+- dodawać                - dołączać               - przyczepiać
+- przyprawiać            - sztukować
+
+[38;5;223m[48;5;58modnośnie dosypywania do czegoś[0m
+- dopełniać              - dosypywać              - przysypywać
+
+[38;5;223m[48;5;58mNone[0m
+- dorzucać
+
+[38;5;223m[48;5;58mw kontekście powiększania ilości czegoś[0m
+- dodawać                - dokładać               - dokładać do czegoś
+- dorzucać               - powiększać             - powiększyć
+- przydawać              - spotęgować             - wzbogacać
+- zwiększać
+
+[38;5;223m[48;5;58modnośnie dopowiadania czegoś na dany temat[0m
+- dodawać                - dopowiadać             - dorzucać
+- nadmieniać             - wtrącać
+
+[38;5;223m[48;5;58modnośnie dokompletowywania czegoś[0m
+- dokompletować          - dokompletowywać        - dopełniać
+
+[38;5;223m[48;5;58mw odniesieniu do uzupełnienia, na przykład paliwa[0m
+- dolać                  - dopełniać              - dopełnić
+- nalać do pełna         - napełnić               - przylać
+- uzupełnić              - zapełniać
+
+[38;5;223m[48;5;58modnośnie dolewania płynu[0m
+- dolewać                - dopełniać              - napełniać
+- przylewać
+
+[38;5;223m[48;5;58mw kontekście uzupełniania czegoś[0m
+- napełniać              - wypełniać              - zapełniać
+
+[38;5;223m[48;5;58mw kontekście zaopatrzeniowym[0m
+- instalować coś         - opatrywać              - poprzedzać
+- zaopatrywać            - zaopatrywać w coś
+
+[38;5;223m[48;5;58mw kontekście adnotacyjnym[0m
+- adnotować              - dekretować             - dodawać
+- dołączać               - dopisywać              - notować
+- przyłączać             - uzupełniać napisany tekst - uzupełniać tekst
+
+[38;5;223m[48;5;58mw kontekście zaopatrzeniowym[0m
+- dokładać               - dołączać               - zaopatrywać
+- zasilać
+
+[38;5;223m[48;5;58mw odniesieniu do uzupełniania czegoś[0m
+- dorabiać               - dosztukowywać          - nadrabiać
+
+[38;5;223m[48;5;58mjako określenie dołączania czegoś do czegoś[0m
+- dodawać                - dokładać               - dołączać
+- dopełniać

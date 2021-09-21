@@ -3,7 +3,7 @@ import argparse
 import urllib.parse
 from collections.abc import Iterable
 from dataclasses import dataclass
-from typing import IO
+from typing import IO, Optional
 
 import lxml.html
 import requests
@@ -21,7 +21,7 @@ USER_AGENT = (
 class SynonimResult:
     """A result from the synonim.net engine."""
 
-    meaning: str
+    meaning: Optional[str]
     synonyms: list[str]
 
 
@@ -59,8 +59,9 @@ class SynonimEngine(BaseEngine[SynonimResult]):
         )
 
         for group in doc.cssselect("#mgru span"):
+            header = group.cssselect("h3 a")
             yield SynonimResult(
-                meaning=group.cssselect("h3 a")[0].text,
+                meaning=header[0].text if header else None,
                 synonyms=[node.text for node in group.cssselect("ul li a")],
             )
 

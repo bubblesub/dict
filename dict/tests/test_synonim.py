@@ -17,6 +17,12 @@ from dict.__main__ import main
             "https://synonim.net/synonim/mi%C5%82o%C5%9B%C4%87",
         ),
         (
+            "synonim_headerless",
+            "uzupełniać",
+            200,
+            "https://synonim.net/synonim/uzupe%C5%82nia%C4%87",
+        ),
+        (
             "synonim_invalid",
             "fraktur",
             404,

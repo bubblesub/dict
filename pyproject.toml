@@ -1,3 +1,45 @@
+[tool.poetry]
+name = "dict"
+version = "1.0"
+description = "A command line toolkit for online dictionary lookups."
+authors = ["Marcin Kurczewski <dash@wind.garden>"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/bubblesub/dict"
+classifiers = [
+    "Environment :: Other Environment",
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.9",
+    "Topic :: Text Processing",
+    "Topic :: Text Processing :: Linguistic",
+]
+packages = [
+    { include = "dict" }
+]
+include = ["dict/py.typed"]
+
+[tool.poetry.dependencies]
+python = ">=3.9,<4.0"
+requests = "^2.26.0"
+lxml = "^4.7.1"
+cssselect = "^1.1.0"
+tqdm = "^4.62.3"
+xdg = "^5.1.1"
+
+[tool.poetry.dev-dependencies]
+pre-commit = "^2.16.0"
+pytest = "^6.2.5"
+black = "^21.12b0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
 [tool.black]
 line-length = 79
 

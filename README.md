@@ -20,7 +20,22 @@ Currently supports:
 pip install --user dict
 ```
 
-## Contributing
+# Contributing
 
-This project uses [precommit](https://pre-commit.com/). You can install it with
-`python3 -m pip install --user pre-commit` and running `pre-commit install`.
+```sh
+# Clone the repository:
+git clone https://github.com/bubblesub/dict.git
+cd dict
+
+# Install to a local venv:
+poetry install
+
+# Install pre-commit hooks:
+poetry run pre-commit install
+
+# Enter the venv:
+poetry shell
+```
+
+This project uses [poetry](https://python-poetry.org/) for packaging,
+install instructions at [poetry#installation](https://python-poetry.org/docs/#installation)

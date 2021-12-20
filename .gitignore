@@ -1,5 +1,6 @@
+/dist
+/build
 .coverage
 .pytest_cache/
 .mypy_cache/
 *.egg-info/
-dist/
